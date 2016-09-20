@@ -238,15 +238,13 @@ function play() {
   );
 
   //TODO with array_walk_recursive() ?
-  foreach ($hits as $k => $hit) {
+  foreach ($hits as $hit) {
     $play = $hit;
     if ($play != false) {
-      $method = $k;
       break;
     }
   }
 
-  $response['method'] = $method;
   $response['play'] = $play;
   return $response;
 }
